@@ -1,0 +1,131 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Inter, Arial, sans-serif;
+}
+
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #020617, #0f172a, #020617);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+body::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  pointer-events: none; 
+}
+
+
+.container {
+  position: relative;
+  z-index: 10; 
+  width: 100%;
+  max-width: 420px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+.card h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: #020617;
+}
+
+.card p.subtitle {
+  font-size: 15px;
+  color: #475569;
+  margin-bottom: 22px;
+}
+
+
+.input-group {
+  margin-bottom: 14px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #c7d2fe;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+
+.analyze-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  margin-top: 12px;
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.analyze-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
+}
+
+.analyze-btn:active {
+  transform: translateY(0);
+}
+
+
+#result {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.error {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.success {
+  color: #065f46;
+}
+
+
+@media (max-width: 768px) {
+  body::after {
+    display: none;
+  }
+}
